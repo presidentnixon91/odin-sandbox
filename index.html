@@ -5,11 +5,28 @@
   <meta charset="UTF-8"/>
 </head>
 <body>
+    <main>
+        <header>
+            <h1>Testing area</h1>
+        </header>
+        <section>
+
+        </section>
+    </main>
+    
+
   <script>
     // Your JavaScript goes here!
-    console.log(23 + 97);
-    console.log(20 + 45 + 12 + 65 + 34 + 1);
-    print((4 + 6 + 9) / 7);
+    let quoteStart = 'Don\'t judge each day by the harvest you reap ';
+    let quoteEnd = 'but by the seeds that you plant.';
+    let finalQuote = quoteStart + quoteEnd;
+
+    let section = document.querySelector("section");
+    section.innerHTML = ' ';
+    let para1 = document.createElement('p');
+    para1.textContent = finalQuote;
+
+    section.appendChild(para1);
   </script>
 </body>
 </html>
