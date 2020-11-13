@@ -16,7 +16,7 @@
     
 
   <script>
-    // Your JavaScript goes here!
+    // JavaScript Strings task 1
     let quoteStart = 'Don\'t judge each day by the harvest you reap ';
     let quoteEnd = 'but by the seeds that you plant.';
     let finalQuote = quoteStart + quoteEnd;
@@ -27,6 +27,24 @@
     para1.textContent = finalQuote;
 
     section.appendChild(para1);
+
+    // JavaScript Strings task 2
+    let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
+    let substring = 'green eggs and ham';
+
+    let index = quote.indexOf(substring);
+    let quoteLength = quote.length;
+    let substringLength = substring.length;
+    index = index + substringLength + 1;
+    let revisedQuote = quote.slice(0,index);
+
+    para1 = document.createElement('p');
+    para1.textContent = `The quote is ${ quoteLength } characters long.`;
+    let para2 = document.createElement('p');
+    para2.textContent = revisedQuote;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
   </script>
 </body>
 </html>
