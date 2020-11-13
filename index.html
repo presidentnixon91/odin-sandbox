@@ -5,13 +5,19 @@
   <meta charset="UTF-8"/>
 </head>
 <body>
+    <header>
+        <h1>Testing area</h1>
+    </header>
     <main>
-        <header>
-            <h1>Testing area</h1>
-        </header>
         <section>
 
+            
         </section>
+        <div class="output">
+            <ul>
+                
+            </ul>
+        </div>
     </main>
     
 
@@ -79,6 +85,30 @@
     para1.textContent = myString;
 
     section.appendChild(para1);
+
+    // JavaScript task 5
+    const list = document.querySelector('.output ul');
+    list.innerHTML = '';
+    let greetings = ['Happy Birthday!',
+                    'Merry Christmas my love',
+                    'A happy Christmas to all the family',
+                    'You\'re all I want for Christmas',
+                    'Get well soon'];
+
+    for (let i = 0; i < greetings.length; i++) {
+        let input = greetings[i];
+        // Your conditional test needs to go inside the parentheses
+        let christmasString = 'Christmas';
+        let xmasTest = greetings[i].indexOf(christmasString);
+        
+        // in the line below, replacing what's currently there
+        if(xmasTest !== -1) {
+            let listItem = document.createElement('li');
+            listItem.textContent = input;
+            list.appendChild(listItem);
+        }
+    }
+
   </script>
 </body>
 </html>
