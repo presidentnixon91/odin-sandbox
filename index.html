@@ -97,16 +97,53 @@
 
     for (let i = 0; i < greetings.length; i++) {
         let input = greetings[i];
-        // Your conditional test needs to go inside the parentheses
         let christmasString = 'Christmas';
         let xmasTest = greetings[i].indexOf(christmasString);
         
-        // in the line below, replacing what's currently there
         if(xmasTest !== -1) {
             let listItem = document.createElement('li');
             listItem.textContent = input;
             list.appendChild(listItem);
         }
+    }
+
+    // JS task 6
+    list.innerHTML = '';
+    let cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+
+    for (let i = 0; i < cities.length; i++) {
+        let input = cities[i];
+        
+        let cityLower = input.toLowerCase();
+        let firstLetter = cityLower[0];
+        firstLetter = firstLetter.toUpperCase();
+        let stripCity = cityLower.slice(1);
+        let result = firstLetter + stripCity;
+
+        let listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+    }
+
+    // JS task 7
+    list.innerHTML = '';
+    let stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
+                    'GNF576746573fhdg4737dh4;Greenfield',
+                    'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
+                    'SYB4f65hf75f736463;Stalybridge',
+                    'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
+
+    for (let i = 0; i < stations.length; i++) {
+    let input = stations[i];
+    let stationStart = input.slice(0,3);
+    let semicolon = ';';
+    let breakPoint = input.indexOf(semicolon) + 1;
+    let stationEnd = input.slice(breakPoint,input.length);
+
+    let result = stationStart + ': ' + stationEnd;
+    let listItem = document.createElement('li');
+    listItem.textContent = result;
+    list.appendChild(listItem);
     }
 
   </script>
