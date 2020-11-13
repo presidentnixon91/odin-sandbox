@@ -47,7 +47,6 @@
     section.appendChild(para2);
 
     // JavaScript Strings task 3
-
     quote = 'I dO nOT lIke gREen eGgS anD HAM';
 
     let fixedQuote = quote.toLowerCase();
@@ -65,6 +64,21 @@
 
     section.appendChild(para1);
     section.appendChild(para2);
+
+    // JavaScript Strings task 4
+    let theorem = 'Pythagorean theorem';
+
+    let a = 5;
+    let b = 8;
+    let combinedSides = (a * a) + (b * b);
+
+    let myString = `Using ${ theorem }, we can work out that that if the two shortest sides of a right-angled triangle have lengths of ${ a } and ${ b }, the length of the hypotenuse is ${ Math.sqrt(combinedSides) }.`;
+
+    section.innerHTML = ' ';
+    para1 = document.createElement('p');
+    para1.textContent = myString;
+
+    section.appendChild(para1);
   </script>
 </body>
 </html>
