@@ -134,16 +134,34 @@
                     'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
 
     for (let i = 0; i < stations.length; i++) {
-    let input = stations[i];
-    let stationStart = input.slice(0,3);
-    let semicolon = ';';
-    let breakPoint = input.indexOf(semicolon) + 1;
-    let stationEnd = input.slice(breakPoint,input.length);
+        let input = stations[i];
+        let stationStart = input.slice(0,3);
+        let semicolon = ';';
+        let breakPoint = input.indexOf(semicolon) + 1;
+        let stationEnd = input.slice(breakPoint,input.length);
 
-    let result = stationStart + ': ' + stationEnd;
-    let listItem = document.createElement('li');
-    listItem.textContent = result;
-    list.appendChild(listItem);
+        let result = stationStart + ': ' + stationEnd;
+        let listItem = document.createElement('li');
+        listItem.textContent = result;
+        list.appendChild(listItem);
+    }
+
+    // JS login task
+    let loginUsername = prompt("Who's there?","");
+    
+    if(loginUsername == "Admin") {
+        let loginPassword = prompt("Password","");
+        if(loginPassword == "TheMaster") {
+            alert("Welcome!");
+        } else if (loginPassword == "" || loginPassword == null) {
+            alert("Canceled");
+        } else {
+            alert("Wrong password");
+        }
+    } else if(loginUsername == "" || loginUsername == null) {
+        alert("Canceled");
+    } else {
+        alert("I don't know you");
     }
 
   </script>
