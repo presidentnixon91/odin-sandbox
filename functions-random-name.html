@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    let para = document.createElement('p');
+
+    // Add your code here
+
+    function chooseName(minNumber) {
+      const numberOfNames = names.length;
+      random(minNumber,numberOfNames);
+      let paraContent = 'The random name is ' + names[randomNumber];
+      para.textContent = paraContent;
+    }
+
+    function random(minNumber,numberOfNames) {
+        let min = minNumber;
+        randomNumber = (Math.floor(Math.random() * (numberOfNames - min) + min));
+        console.log(randomNumber);
+        return randomNumber;
+    }
+
+    chooseName(0);
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>
