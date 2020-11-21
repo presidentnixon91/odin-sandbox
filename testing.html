@@ -16,11 +16,19 @@
 
   </body>
   <script>
-    function random(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min);
+    function pow(x,n) {
+      let calc = x**n;
+      alert(calc);
+      return calc;
     }
+
+    function getNumbers() {
+      let x = Number(prompt('Enter x',''));
+      let n = Number(prompt('Enter n',''));
+      pow(x,n);
+    }
+
+    getNumbers();
   </script>
 
 </html>
