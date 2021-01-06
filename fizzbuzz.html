@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>FizzBuzz Project</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 120%;
+        }
+      section#counting div {
+          float: left;
+          min-width: 15%;
+      }
+      button {
+          margin-bottom: 1rem;
+          padding: 5px 10px;
+          font-size: 18px;
+      }
+    </style>
+  </head>
+
+  <body>
+      <header>
+          <h1>FizzBuzz</h1>
+      </header>
+
+    <section>
+        <p class="description">Enter in any number and let the program figure out if it's divisible by 3, 5 or both. If it's divisible by 3, it will show "Fizz", for 5, "Buzz" and if it is divisible by both, it will show "FizzBuzz".</p>
+        <h2>Begin?</h2>
+        <button id="gameButton" onclick="runGame()">Start</button>
+    </section>
+    <section id="counting">
+
+    </section>
+
+  </body>
+  <script>
+      function runGame() {
+        // Get the input from the user for what number they want to use
+        let answer = parseInt(prompt("What number do you want to count to?",21));
+
+        // Change button to "reset"
+        let buttonText = document.querySelector("#gameButton");
+        buttonText.textContent = "Reset";
+
+        // Get element to add numbers into
+        let sectionHTML = document.querySelector("#counting");
+
+        // Use a loop to count to the number
+        if(answer !== undefined) {
+            for(i = 1;i <= answer;i++) {
+                let count = i;
+                if((i % 3 === 0) && (i % 5 === 0)) {
+                    count = "FizzBuzz";
+                } else if(i % 3 === 0) {
+                    count = "Fizz";
+                } else if (i % 5 === 0) {
+                    count = "Buzz";
+                }
+
+                // Add the count to section
+                sectionHTML.innerHTML = sectionHTML.innerHTML + '<div>' + count + '</div>';
+            }
+        }
+      }
+  </script>
+
+</html>
