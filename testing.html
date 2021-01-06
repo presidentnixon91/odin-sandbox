@@ -16,19 +16,19 @@
 
   </body>
   <script>
-    function pow(x,n) {
-      let calc = x**n;
-      alert(calc);
-      return calc;
-    }
+    let ask = (question, yes, no) => {
+      if (confirm(question)) {
+        return yes();
+      } else {
+        return no();
+      }
+    };
 
-    function getNumbers() {
-      let x = Number(prompt('Enter x',''));
-      let n = Number(prompt('Enter n',''));
-      pow(x,n);
-    }
-
-    getNumbers();
+    ask(
+      "Do you agree?",
+      () => alert("You agreed."),
+      () => alert("You canceled the execution.")
+    )
   </script>
 
 </html>

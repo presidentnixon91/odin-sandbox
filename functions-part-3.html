@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Part 3</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+    </section>
+
+  </body>
+  <script>
+    function add7(n) {
+        n += 7;
+        console.log(n);
+    }
+    add7(5);
+
+    function multiply(a,b) {
+        console.log(a * b);
+    }
+    multiply(5,7);
+
+    function capitalize(phrase) {
+        phrase = phrase.toLowerCase();
+        let firstLetter = phrase[0];
+        firstLetter = firstLetter.toUpperCase();
+        phrase = phrase.slice(1);
+        phrase = firstLetter + phrase;
+        console.log(phrase);
+    }
+    capitalize("the bloody best phrase you'll ever hear in ya damn life");
+
+    function lastLetter(phrase) {
+        let phraseLength = phrase.length-1;
+        let lastChar = phrase[phraseLength];
+        console.log(lastChar);
+    }
+    lastLetter("what is dat last letter yo");
+
+  </script>
+
+</html>
