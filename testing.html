@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Loops: Task 2</title>
+    <title>Loops: Task 3</title>
     <style>
       
     </style>
@@ -14,35 +14,31 @@
     </section>
   </body>
   <script>
-    // program that, given a name, searches an array of objects containing names and phone numbers (phonebook) and, if it finds the name, outputs the name and phone number into the paragraph (para) and then exits the loop before it has run its course
-    let name = 'Mustafa';
-    let i = 0;
+    let i = 500;
     let para = document.createElement('p');
 
-    let phonebook = [
-      { name : 'Chris', number : '1549' },
-      { name : 'Li Kang', number : '9634' },
-      { name : 'Anne', number : '9065' },
-      { name : 'Francesca', number : '3001' },
-      { name : 'Mustafa', number : '6888' },
-      { name : 'Tina', number : '4312' },
-      { name : 'Bert', number : '7780' },
-      { name : 'Jada', number : '2282' },
-    ]
+    function isPrime(num) {
+      for(let i = 2; i < num; i++) {
+        if(num % i === 0) {
+          return false;
+        }
+      }
+
+      return true;
+    }
+
 
     // Add your code here
 
-    // Using while loop to change things up
-    do {
-      // Is name the same as phonebook name?
-      if (name === phonebook[i].name) {
-        // If it is, output name and number into para
-        para.textContent = phonebook[i].name + ' ' + phonebook[i].number;
-        // Exit loop
-        break;
+    // loop to go through the numbers 2 to 500 backwards and run the provided isPrime() function
+    while (i > 1) {
+      // isPrime(i);
+      // For each one that is a prime number, add it to the paragraph's textContent along with some kind of separator
+      if(isPrime(i)) {
+        para.textContent += i + ', ';
       }
-      i++;
-    } while (i < phonebook.length);
+      i--;
+    }
 
     // Don't edit the code below here!
     let section = document.querySelector('section');
