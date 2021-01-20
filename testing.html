@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Loops: Task 3</title>
+    <title>Loops: Tasks</title>
     <style>
       
     </style>
@@ -14,35 +14,18 @@
     </section>
   </body>
   <script>
-    let i = 500;
-    let para = document.createElement('p');
-
-    function isPrime(num) {
-      for(let i = 2; i < num; i++) {
-        if(num % i === 0) {
-          return false;
-        }
+    // Write a loop which prompts for a number greater than 100
+    let input = prompt("Enter a number over 100");
+    
+    while(input <= 100 && input) {
+      // If the visitor enters another number – ask them to input again
+      if(input > 100) {
+        console.log("Success");
+        break;
+      } else {
+        input = prompt("Try again");
       }
-
-      return true;
     }
-
-
-    // Add your code here
-
-    // loop to go through the numbers 2 to 500 backwards and run the provided isPrime() function
-    while (i > 1) {
-      // isPrime(i);
-      // For each one that is a prime number, add it to the paragraph's textContent along with some kind of separator
-      if(isPrime(i)) {
-        para.textContent += i + ', ';
-      }
-      i--;
-    }
-
-    // Don't edit the code below here!
-    let section = document.querySelector('section');
-    section.appendChild(para);
   </script>
 
 </html>
