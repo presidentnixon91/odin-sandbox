@@ -2,33 +2,34 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Functions: Task 2</title>
+    <title>Loops: Task 1</title>
     <style>
       
     </style>
   </head>
 
   <body>
-
     <section class="preview">
 
     </section>
-
   </body>
   <script>
-    let ask = (question, yes, no) => {
-      if (confirm(question)) {
-        return yes();
-      } else {
-        return no();
-      }
-    };
+    let myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    let list = document.createElement('ul');
 
-    ask(
-      "Do you agree?",
-      () => alert("You agreed."),
-      () => alert("You canceled the execution.")
-    )
+    // Add your code here
+
+    let item;
+    for (i = 0; i < myArray.length; i++) {
+      item = document.createElement('li');
+      item.textContent = myArray[i];
+      list.appendChild(item);
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    section.appendChild(list);
   </script>
 
 </html>
