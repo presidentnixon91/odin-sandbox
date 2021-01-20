@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Loops: Task 1</title>
+    <title>Loops: Task 2</title>
     <style>
       
     </style>
@@ -14,22 +14,39 @@
     </section>
   </body>
   <script>
-    let myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
-    let list = document.createElement('ul');
+    // program that, given a name, searches an array of objects containing names and phone numbers (phonebook) and, if it finds the name, outputs the name and phone number into the paragraph (para) and then exits the loop before it has run its course
+    let name = 'Mustafa';
+    let i = 0;
+    let para = document.createElement('p');
+
+    let phonebook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
 
     // Add your code here
 
-    let item;
-    for (i = 0; i < myArray.length; i++) {
-      item = document.createElement('li');
-      item.textContent = myArray[i];
-      list.appendChild(item);
-    }
+    // Using while loop to change things up
+    do {
+      // Is name the same as phonebook name?
+      if (name === phonebook[i].name) {
+        // If it is, output name and number into para
+        para.textContent = phonebook[i].name + ' ' + phonebook[i].number;
+        // Exit loop
+        break;
+      }
+      i++;
+    } while (i < phonebook.length);
 
     // Don't edit the code below here!
-
-    const section = document.querySelector('section');
-    section.appendChild(list);
+    let section = document.querySelector('section');
+    section.appendChild(para);
   </script>
 
 </html>
