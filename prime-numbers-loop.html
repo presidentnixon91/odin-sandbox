@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Prime Numbers</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    <section class="preview">
+
+    </section>
+  </body>
+  <script>
+    // Loop that checks for prime numbers
+    let section = document.querySelector('section');
+    let para = document.createElement('p');
+    let n = 10; // max to check up to
+    
+    // Outer loop to go through numbers 2 to 10
+    nextPrime: for (let i = 2; i <= n; i++) {
+      // Inner loop to check if current number is prime
+      for (let j = 2; j < i; j++) {
+        // Check if number is divisible by any number lower than it and higher than 2
+        if(i % j === 0) {
+          // Is not a prime number
+          console.log(i + " is not a prime number");
+          continue nextPrime;
+        }
+      }
+      para.textContent += i + ', ';
+    }
+    section.appendChild(para);
+  </script>
+
+</html>
