@@ -42,3 +42,28 @@ function getUserSelection() {
 
     module.exports = removeFromArray
 
+// Get a random colour
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+// Check if object is empty
+let schedule = {};
+    
+function isEmpty(obj) {
+    for (let key in obj) {
+    return false;
+    }
+    return true;
+}
+
+alert(isEmpty(schedule));
+
+schedule["8:30"] = "get up";
+
+alert(isEmpty(schedule));
