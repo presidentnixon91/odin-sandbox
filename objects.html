@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>JS Testing</title>
+    <style>
+      
+    </style>
+  </head>
+
+  <body>
+    
+  </body>
+  <script>
+    
+    const person = {
+        // Sub-namespaces, objects within objects
+        name : {
+            first: 'Bob',
+            last: 'Smith'
+            },
+            // Now person.name.first or person['name']['first'] = Bob
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function() {
+            alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function() {
+            alert('Hi! I\'m ' + this.name[0] + '.');
+        }
+        myDataName = 'height';
+        myDataValue = '1.75m';
+        person[myDataName] = myDataValue;
+    };
+
+    // Changing values 
+    person.age = 45;
+    person['name']['last'] = 'Cratchit';    
+
+    let myDataName = nameInput.value;
+    let myDataValue = nameValue.value;
+
+    person[myDataName] = myDataValue;
+    
+  </script>
+
+</html>
